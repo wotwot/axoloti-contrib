@@ -1,0 +1,212 @@
+<patch-1.0>
+   <patcher type="patch/patcher" sha="da39a3ee5e6b4b0d3255bfef95601890afd80709" uuid="a245c220448000c901caef03c8b07740d533914a" name="fm" x="28" y="28">
+      <params>
+         <frac32.u.map name="mix_1:gain1" value="64.0"/>
+         <frac32.s.map name="adsr vca:a" value="-64.0"/>
+         <frac32.s.map name="adsr vca:d" value="-23.0"/>
+         <frac32.u.map name="adsr vca:s" value="14.5"/>
+         <frac32.s.map name="adsr vca:r" value="10.0"/>
+         <frac32.s.map name="adsr vcf:a" value="-23.0"/>
+         <frac32.s.map name="adsr vcf:d" value="-28.0"/>
+         <frac32.u.map name="adsr vcf:s" value="20.5"/>
+         <frac32.s.map name="adsr vcf:r" value="-21.0"/>
+         <frac32.s.map name="vcf3_1:pitch" value="-26.0"/>
+         <frac32.u.map name="vcf3_1:reso" value="27.0"/>
+         <frac32.s.map name="sine_3" value="15.0"/>
+         <frac32.u.map name="mix_3" value="22.0"/>
+         <frac32.s.map name="sine_4" value="5.0"/>
+         <frac32.s.map name="sine_1" value="-19.0"/>
+         <frac32.u.map name="mix_1:gain2" value="4.0"/>
+      </params>
+      <attribs>
+         <combo attributeName="poly" selection="4"/>
+         <combo attributeName="mididevice" selection="omni"/>
+         <combo attributeName="midiport" selection="omni"/>
+      </attribs>
+      <subpatch>
+         <obj type="midi/in/keyb" sha="d2b06e818348b14523c68fd021077192860093c0" uuid="53b04874696932f38aceaa168bd5d9efb743716d" name="keyb_1" x="56" y="28">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="env/adsr" sha="2c4b16047d03b574d8a72b651f130895749eb670" uuid="d1dbcc5fa6f87b98a6a91c87fd44acee5e690bac" name="adsr vca" x="196" y="28">
+            <params>
+               <frac32.s.map name="a" onParent="true" value="-64.0"/>
+               <frac32.s.map name="d" onParent="true" value="-23.0"/>
+               <frac32.u.map name="s" onParent="true" value="16.5"/>
+               <frac32.s.map name="r" onParent="true" value="10.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="env/adsr" sha="2c4b16047d03b574d8a72b651f130895749eb670" uuid="d1dbcc5fa6f87b98a6a91c87fd44acee5e690bac" name="adsr vcf" x="308" y="28">
+            <params>
+               <frac32.s.map name="a" onParent="true" value="-41.0"/>
+               <frac32.s.map name="d" onParent="true" value="-28.0"/>
+               <frac32.u.map name="s" onParent="true" value="22.5"/>
+               <frac32.s.map name="r" onParent="true" value="-21.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="filter/vcf3" sha="2a5cccf4517f54d2450ab7518925f49e4c41c837" uuid="92455c652cd098cbb682a5497baa18abbf2ef865" name="vcf3_1" x="798" y="28">
+            <params>
+               <frac32.s.map name="pitch" onParent="true" value="-11.0"/>
+               <frac32.u.map name="reso" onParent="true" value="27.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="gain/vca" sha="c904cdd24d65968df2f5796e107db3747dd691a6" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_1" x="910" y="28">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet a" sha="9e7e04867e1d37837b0924c9bf18c44ac68602e6" uuid="abd8c5fd3b0524a6630f65cad6dc27f6c58e2a3e" name="outlet_1" x="980" y="28">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="osc/sine" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="sine_3" x="56" y="238">
+            <params>
+               <frac32.s.map name="pitch" onParent="true" value="14.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="mix/mix 1" sha="d026fb16b96b914b39a4d9b8bc6f3bb9c670be32" uuid="e8f482af5b1ec4a2e9cf8ac7ce09e7c0e43cea08" name="mix_3" x="168" y="238">
+            <params>
+               <frac32.u.map name="gain1" onParent="true" value="23.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="osc/sine" sha="edec4a9d5f533ea748cd564ce8c69673dd78742f" uuid="6e094045cca76a9dbf7ebfa72e44e4700d2b3ba" name="sine_4" x="266" y="238">
+            <params>
+               <frac32.s.map name="pitch" onParent="true" value="5.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="lfo/sine r" sha="793d67bc0866975a78623ac43c35750ba3cae412" uuid="725d481acbefa181fa5d92f414d317c86b77b789" name="sine_1" x="448" y="28">
+            <params>
+               <frac32.s.map name="pitch" onParent="true" value="0.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="mix/mix 2" sha="8356eb392edeb3251d3de74955ee9c38cb87d1d0" uuid="682ea5496ded046d981e26b720a6e7f8eca97541" name="mix_1" x="672" y="28">
+            <params>
+               <frac32.u.map name="gain1" value="0.0"/>
+               <frac32.u.map name="gain2" onParent="true" value="0.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="math/*c" sha="60143a29e35f452025e9edaa2dec6e660ecb9c6e" uuid="7d5ef61c3bcd571ee6bbd8437ef3612125dfb225" name="*c_1" x="560" y="28">
+            <params>
+               <frac32.u.map name="amp" value="6.5"/>
+            </params>
+            <attribs/>
+         </obj>
+         <nets>
+            <net>
+               <source obj="keyb_1" outlet="gate"/>
+               <dest obj="adsr vca" inlet="gate"/>
+            </net>
+            <net>
+               <source obj="vcf3_1" outlet="out"/>
+               <dest obj="vca_1" inlet="a"/>
+            </net>
+            <net>
+               <source obj="adsr vca" outlet="env"/>
+               <dest obj="vca_1" inlet="v"/>
+            </net>
+            <net>
+               <source obj="sine_4" outlet="wave"/>
+               <dest obj="vcf3_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="keyb_1" outlet="note"/>
+               <dest obj="sine_3" inlet="pitch"/>
+               <dest obj="sine_4" inlet="pitch"/>
+               <dest obj="mix_1" inlet="bus_in"/>
+            </net>
+            <net>
+               <source obj="sine_3" outlet="wave"/>
+               <dest obj="mix_3" inlet="in1"/>
+            </net>
+            <net>
+               <source obj="mix_3" outlet="out"/>
+               <dest obj="sine_4" inlet="freq"/>
+            </net>
+            <net>
+               <source obj="keyb_1" outlet="gate2"/>
+               <dest obj="adsr vcf" inlet="gate"/>
+            </net>
+            <net>
+               <source obj="vca_1" outlet="o"/>
+               <dest obj="outlet_1" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="adsr vcf" outlet="env"/>
+               <dest obj="mix_1" inlet="in1"/>
+            </net>
+            <net>
+               <source obj="mix_1" outlet="out"/>
+               <dest obj="vcf3_1" inlet="pitch"/>
+            </net>
+            <net>
+               <source obj="sine_1" outlet="wave"/>
+               <dest obj="*c_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="*c_1" outlet="out"/>
+               <dest obj="mix_1" inlet="in2"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>polyphonic</subpatchmode>
+            <MidiChannel>1</MidiChannel>
+            <NPresets>8</NPresets>
+            <NPresetEntries>32</NPresetEntries>
+            <NModulationSources>8</NModulationSources>
+            <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+            <Author>wotwot</Author>
+         </settings>
+         <notes><![CDATA[]]></notes>
+      </subpatch>
+   </patcher>
+   <obj type="mix/mix 1" sha="d026fb16b96b914b39a4d9b8bc6f3bb9c670be32" uuid="e8f482af5b1ec4a2e9cf8ac7ce09e7c0e43cea08" name="mix_1" x="308" y="28">
+      <params>
+         <frac32.u.map name="gain1" value="20.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" sha="c27566f972d15f25252f61b5cff014a3edce9706" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="406" y="28">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="154" y="480" text="modulator"/>
+   <comment type="patch/comment" x="154" y="512" text="mod amount"/>
+   <comment type="patch/comment" x="152" y="550" text="carrier"/>
+   <comment type="patch/comment" x="154" y="588" text="filter lfo"/>
+   <comment type="patch/comment" x="155" y="621" text="lfo depth"/>
+   <nets>
+      <net>
+         <source obj="mix_1" outlet="out"/>
+         <dest obj="out_1" inlet="left"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="fm" outlet="outlet_1"/>
+         <dest obj="mix_1" inlet="in1"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+      <MidiChannel>1</MidiChannel>
+      <NPresets>8</NPresets>
+      <NPresetEntries>32</NPresetEntries>
+      <NModulationSources>8</NModulationSources>
+      <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+      <Author>wotwot</Author>
+      <License>CC BY SA 3.0</License>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>1856</x>
+      <y>121</y>
+      <width>676</width>
+      <height>831</height>
+   </windowPos>
+</patch-1.0>
